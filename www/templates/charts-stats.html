@@ -1,0 +1,116 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="" style="">
+        <ion-refresher pulling-icon="ion-load-a" refreshing-icon="ion-load-a" on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div class=" red-background margin10">
+            <div class="row red-background">
+                <div class="col section-title-colored ">Last entry</div>
+            </div>
+            <div class="row red-background ">
+                <div class="col  last-entry-details">
+                    <h2>  <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 0}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 1, 'ion-ios-star-outline': historyList[historyList.length-1].ranking < 2}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 2, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <3}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 3, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <4}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 4, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <5}"></i>
+                            </h2>
+                </div>
+            </div>
+            <div class="row red-background marginbottom10">
+                <div class="col  last-entry-details">
+                    {{historyList[historyList.length-1].date | datefilter }}
+                </div>
+            </div>
+
+            <div class="row red-background marginbottom10">
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].height}}</div>
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].weight}}</div>
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].where}}</div>
+            </div>
+            <div class="row red-background ">
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].gender}}</div>
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].nationality}}</div>
+                <div class="col col-33 last-entry-details">{{historyList[historyList.length-1].job}}</div>
+            </div>
+            <div class="row red-background ">
+                <div class="col last-entry-details">{{historyList[historyList.length-1].comment}}</div>
+            </div>
+
+            <!--
+                    <div class="col col-10 section-last-entry">
+                        <div class="">
+                            <h2>  <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 0}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 1, 'ion-ios-star-outline': historyList[historyList.length-1].ranking < 2}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 2, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <3}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 3, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <4}"></i>
+                                <i data-ng-class="{'ion-ios-star': historyList[historyList.length-1].ranking > 4, 'ion-ios-star-outline': historyList[historyList.length-1].ranking <5}"></i>
+                            </h2>
+                        </div>
+                    </div>
+-->
+
+            <!--
+                    <div class="col section-last-entry">
+
+                        <div class="last-entry-details">
+                            {{historyList[historyList.length-1].date | datefilter }} : You dated a {{historyList[historyList.length-1].height}} and {{historyList[historyList.length-1].weight}} {{historyList[historyList.length-1].gender}} from {{historyList[historyList.length-1].nationality}} working as a {{historyList[historyList.length-1].job}}.
+                            <br>It took place in a {{historyList[historyList.length-1].where}}.
+                            <br>
+                            <br>Your comment from this experience :
+                            <br>{{historyList[historyList.length-1].comment}}.
+
+                        </div>
+                    </div>
+-->
+        </div>
+
+        <!--
+                    <div style="margin-bottom:20px;" class="item item-divider">
+                        Overview
+                    </div>
+                    <canvas id="line" class="chart chart-line" data="dataOverview" labels="labelsOverview" legend="true" series="seriesOverview" click="onClick"></canvas>
+-->
+        <div class=" blue-background margin10">
+            <div class="row blue-background">
+                <div class="col section-title-colored"> <i class="fa fa-star-half-o"></i>
+                </div>
+                <div class="col section-title-colored"> <i class="fa fa-map-marker"></i>
+                </div>
+            </div>
+            <div class="row blue-background ">
+                <div class="col">
+                    <canvas options="nationalitiesOptions" id="doughnut" class="chart chart-doughnut" legend="false" data="data" labels="labels"></canvas>
+                </div>
+                <div class="col">
+                    <canvas options="nationalitiesOptions" id="doughnut2" class="chart chart-doughnut" legend="false" data="countries" labels="lables1">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class=" orange-background margin10">
+            <div class="row orange-background">
+                <div class="col section-title-colored">Monthly records</div>
+            </div>
+
+            <div class="col orange-background">
+                <canvas id="line" options="chartOptions" class="chart chart-line" data="dataOverview" labels="labelsOverview" legend="false" series="seriesOverview" click="onClick"></canvas>
+            </div>
+        </div>
+
+        <!--
+                    <div style="margin-bottom:20px;" class="item item-divider">
+                        Rankings
+                    </div>
+<canvas id="bar" class="chart chart-bar" data="dataRankingBar"
+  labels="labelRankinBar" ></canvas> 
+                    <canvas id="doughnut" class="chart chart-doughnut" legend="true" data="data" labels="labels"></canvas>
+                    <div style="margin-bottom:20px;" class="item item-divider">
+                        Nationality
+                    </div>
+                    <canvas id="doughnut2" class="chart chart-doughnut" legend="true" data="countries" labels="lables1">
+                    </canvas>
+-->
+
+    </ion-content>
+</ion-view>

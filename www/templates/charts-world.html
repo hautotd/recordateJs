@@ -1,0 +1,31 @@
+
+<ion-view view-title="World stats"><ion-content class="" style="">
+    <ion-refresher pulling-icon="ion-load-a" refreshing-icon="ion-load-a" on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class=" orange-background margin10">
+        <div class="row orange-background">
+            <div class="col section-title-colored">Monthly records</div>
+        </div>
+
+        <div class="col orange-background">
+            <canvas id="line" options="chartOptions" class="chart chart-line" data="dataOverview" labels="labelsOverview" legend="false" series="seriesOverview" click="onClick"></canvas>
+        </div>
+    </div>
+    <div class=" blue-background margin10">
+        <div class="row blue-background">
+            <div class="col section-title-colored"> <i class="fa fa-star-half-o"></i>
+            </div>
+            <div class="col section-title-colored"> <i class="fa fa-map-marker"></i>
+            </div>
+        </div>
+        <div class="row blue-background ">
+            <div class="col">
+                <canvas options="nationalitiesOptions" id="doughnut" class="chart chart-doughnut" legend="false" data="data" labels="labels"></canvas>
+            </div>
+            <div class="col">
+                <canvas options="nationalitiesOptions" id="doughnut2" class="chart chart-doughnut" legend="false" data="countries" labels="lables1">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    </ion-content></ion-view>

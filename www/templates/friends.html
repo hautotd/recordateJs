@@ -1,0 +1,39 @@
+<ion-view view-title="Friends">
+    <ion-content>
+        <ion-refresher pulling-text="Refreshing Friends list ..." on-refresh="doRefreshFriendList()">
+        </ion-refresher>
+        <ion-list class="list" show-delete="false" show-reorder="false" can-swipe="true">
+            <!--
+            <div class="item item-divider">
+                Add friend
+            </div>
+-->
+            <div class="list list-inset">
+                <form ng-submit="inviteFriend()">
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+
+                        <input data-ng-model="data.friendNameToInvite" type="text" placeholder="User name">
+
+                    </label>
+                </form>
+                <button data-ng-click="inviteFriend()" class="button button-block button-recordate">
+                    Send invitation
+                </button>
+            </div>
+            <div class="item item-divider">
+                Best friends
+            </div>
+            <ion-item ng-repeat="item in friendsList" class="item">
+
+                <!--    <img ng-src="{{item.img}}">-->
+                <h2>{{item.name}}</h2>
+                <p data-ng-show="item.accepted === 'true'">Accepted {{item.accepted}}</p>
+                <p data-ng-show="item.accepted === 'false'">Not accepted yet</p>
+                <ion-option-button class="button-assertive " ng-click="deleteFriend(item)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

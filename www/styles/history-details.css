@@ -1,0 +1,142 @@
+.main-background {
+    background-image: url('../img/backgrounds/background2.png')
+    /*    background-color: #246bb0;*/
+    /*    background-color: #07496A;*/
+}
+.history-background {
+    background-image: url('../img/backgrounds/background6.png')
+    /*    background-color: #246bb0;*/
+    /*    background-color: #07496A;*/
+}
+.login-background {
+    background-image: url('../img/backgrounds/background7.png')
+    /*    background-color: #246bb0;*/
+    /*    background-color: #07496A;*/
+}
+.details-history {
+    height: 200px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 200px;
+    vertical-align: middle;
+    background-color: #07496A;
+    /*    background-color: #BD891A;*/
+    color: #FFFFFF;
+    border: #FFFFFF solid 1px;
+    /*    border-radius: 10px;*/
+}
+.details-history.gender {
+    font-size: 120px;
+    /*    text-align: center;*/
+}
+.new-entry-elem {
+    /*    height: 200px;*/
+    text-align: center;
+    font-size: 35px;
+    line-height: 110px;
+    vertical-align: middle;
+    /*    background-color: #07496A;*/
+    /*    background-color: #BD891A;*/
+    color: #FFFFFF;
+    /*    color: #07496A;*/
+    /*    color: #C7C7C7;*/
+    border: #FFFFFF solid 0px;
+    font-size: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    /*    border-radius: 10px;*/
+}
+.new-entry-elem.selected {
+    /*
+    background-color: #07496A;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+*/
+    /*    color:#07496A;*/
+    color: #FFDE39;
+    /*    border: #07496A solid 1px;*/
+    border: #FFDE39 solid 0px;
+}
+.new-entry-elem-header {
+/* height: 200px; */
+text-align: center;
+font-size: 20px;
+/* line-height: 20px; */
+vertical-align: middle;
+/* background-color: #07496A; */
+/* background-color: #BD891A; */
+/* color: #FFFFFF; */
+/* color: #07496A; */
+color: white;
+border-bottom: #FFFFFF solid 1px;
+/* font-size: 130px; */
+/* margin-bottom: 0px; */
+/* border-radius: 10px; */
+/* padding-bottom: 10px; */
+padding-bottom: 20px;
+}
+.new-entry-elem-header-center {
+text-align: center;
+font-size: 20px;
+vertical-align: middle;
+color: white;
+    background-color: transparent;
+ 
+}
+.new-entry-elem-btn {
+    /*    height: 200px;*/
+    text-align: center;
+    font-size: 35px;
+    /*    line-height: 200px;*/
+    vertical-align: middle;
+    border: #07496A solid 1px;
+    font-size: 25px;
+    background-color: #07496A;
+    color: #36BFC0;
+    margin-top: 20px;
+    padding: 10px;
+}
+.new-entry-elem-header .name {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.new-entry-select {
+    font-size: 17px;
+    color: #07496A;
+    font-weight: bold;
+}
+.history-select {
+    background-color: transparent;
+}
+.history-select,
+.history-select h2 {
+    font-size: 17px;
+    background-color: transparent;
+    /*    color: #07496A;*/
+    color: white;
+    /*    font-weight: bold;*/
+}
+.history-select i {
+    font-size: 17px;
+    /*    color: #07496A;*/
+    color: white;
+    /*    font-weight: bold;*/
+}
+.history-select p {
+    font-size: 15px;
+    /*    color: #07496A;*/
+    color: white;
+    /*    font-weight: bold;*/
+}
+.friends-list {
+    /*
+    background-color: #246bb0;
+color: white;
+border-bottom-color: white;
+*/
+}
+.checkbox input:checked:before,
+.checkbox input:checked + .checkbox-icon:before {
+    background: #07496A;
+    border-color: #07496A;
+}

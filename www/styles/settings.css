@@ -1,0 +1,46 @@
+.setting-elem{
+/* height: 200px; */
+text-align: center;
+font-size: 35px;
+line-height: 110px;
+vertical-align: middle;
+/* background-color: #07496A; */
+/* background-color: #BD891A; */
+/* color: #4F4C4C; */
+color: #025D8B;
+/* color: #C7C7C7; */
+border: #FFFFFF solid 0px;
+font-size: 50px;
+margin: 5px;
+/* border-radius: 5px; */
+/* border-radius: 10px; */
+border-bottom: #F5B57F solid 2px;
+padding-bottom: 20px;
+}
+.setting-elem:active{
+/* height: 200px; */
+text-align: center;
+font-size: 35px;
+line-height: 110px;
+vertical-align: middle;
+/* background-color: #07496A; */
+/* background-color: #BD891A; */
+/* color: #4F4C4C; */
+color: #001449;
+/* color: #C7C7C7; */
+border: #FFFFFF solid 0px;
+font-size: 50px;
+margin: 5px;
+/* border-radius: 5px; */
+/* border-radius: 10px; */
+border-bottom: #865832 solid 2px;
+padding-bottom: 20px;
+}
+.setting-elem .label-txt{
+ text-align: center;
+font-size: 20px;
+line-height: 1;
+}
+.setting-elem.no-border{
+    border-bottom: 0;
+}

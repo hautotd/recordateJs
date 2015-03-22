@@ -1,0 +1,146 @@
+<div class="modal" data-ng-show="characteristic === 'gender'">
+    <ion-header-bar>
+        <h1 class="title">Partner gender</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.gender" ng-value="'Female'">Female</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.gender" ng-value="'unknown specimen'">Unknown specimen</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.gender" ng-value="'Male'">Male</ion-radio>
+        </div>
+
+
+    </ion-content>
+
+</div>
+
+<div class="modal" data-ng-show="characteristic === 'rating'">
+    <ion-header-bar>
+        <h1 class="title">Rate your partner</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.ranking" ng-value="1">
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>&nbsp;&nbsp; Next</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.ranking" ng-value="2"><i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>&nbsp;&nbsp; First time?</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.ranking" ng-value="3"><i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star-outline"></i>
+                <i class="icon ion-ios-star-outline"></i>&nbsp;&nbsp; Not bad</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.ranking" ng-value="4"><i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star-outline"></i>&nbsp;&nbsp; Almost perfect</ion-radio>
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" ng-model="newDate.ranking" ng-value="5"><i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>
+                <i class="icon ion-ios-star"></i>&nbsp;&nbsp; AWESOME!</ion-radio>
+        </div>
+
+
+    </ion-content>
+
+</div>
+
+
+<div class="modal" data-ng-show="characteristic === 'location'">
+    <ion-header-bar>
+        <h1 class="title">Where did you meet?</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input  data-ng-model="searchLocationText" type="search" placeholder="Search">
+            </label>
+            <button class="button button-clear" data-ng-click="searchLocationText = ''">
+                Cancel
+            </button>
+        </div>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" data-ng-repeat="place in placesList | filter:searchLocationText" ng-model="newDate.where" ng-value="place">{{place}}</ion-radio>
+        </div>
+
+
+    </ion-content>
+
+</div>
+
+<div class="modal" data-ng-show="characteristic === 'nationality'">
+    <ion-header-bar>
+        <h1 class="title">Partner nationality</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input  data-ng-model="searchNationalityText" type="search" placeholder="Search">
+            </label>
+            <button class="button button-clear" data-ng-click="searchNationalityText = ''">
+                Cancel
+            </button>
+        </div>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" data-ng-repeat="country in countries | filter:searchNationalityText" ng-model="newDate.nationality" ng-value="country.name">{{country.name}}</ion-radio>
+        </div>
+
+
+    </ion-content>
+</div>
+
+
+<div class="modal" data-ng-show="characteristic === 'job'">
+    <ion-header-bar>
+        <h1 class="title">Partner job</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input  data-ng-model="searchJobText" type="search" placeholder="Search">
+            </label>
+            <button class="button button-clear" data-ng-click="searchJobText = ''">
+                Cancel
+            </button>
+        </div>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeModal()" data-ng-repeat="job in jobsList | orderBy | filter:searchJobText" ng-model="newDate.job" ng-value="job">{{job}}</ion-radio>
+        </div>
+
+
+    </ion-content>
+</div>
+
+
+<div class="modal" data-ng-show="characteristic === 'details'">
+    <ion-header-bar>
+        <h1 class="title">Partner Heigth/Weight</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="item item-divider">
+                Weight
+            </div>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeDetailsModal()" name="height" data-ng-repeat="weight in weights" ng-model="newDate.weight" ng-value="weight">{{weight}}</ion-radio>
+        </div>
+        <div class="item item-divider">
+               Height
+            </div>
+        <div class="list">
+            <ion-radio class="new-entry-select" data-ng-click="closeDetailsModal()" name="weight" data-ng-repeat="height in heights" ng-model="newDate.height" ng-value="height">{{height}}</ion-radio>
+        </div>
+
+
+    </ion-content>
+</div>

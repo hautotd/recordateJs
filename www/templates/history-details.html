@@ -1,0 +1,124 @@
+<ion-view view-title="Details">
+    <ion-content>
+        <div class=" red-background margin10">
+            <div class="row red-background">
+                <div class="col section-title-colored "><i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 0}"></i>
+                                <i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 1, 'ion-ios-star-outline': userHistoryObject.ranking < 2}"></i>
+                                <i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 2, 'ion-ios-star-outline': userHistoryObject.ranking <3}"></i>
+                                <i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 3, 'ion-ios-star-outline': userHistoryObject.ranking <4}"></i>
+                                <i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 4, 'ion-ios-star-outline': userHistoryObject.ranking <5}"></i>
+                
+                </div>
+                
+                </div>
+            <div class="row">
+            <div class="col  col-offset-33">
+                 <img style="width:50%" data-ng-if="userHistoryObject.profilePic" src="{{userHistoryObject.profilePic}}"> 
+            </div>
+            </div>
+<!--
+            <div class="row red-background ">
+                <div class="col  last-entry-details">
+                     {{userHistoryObject.date | datefilter }}
+                        
+                </div>
+            </div>
+-->
+            <div class="row red-background marginbottom10">
+                <div class="col  last-entry-details">
+                    {{userHistoryObject.date | datefilter }}
+                </div>
+            </div>
+
+            <div class="row red-background marginbottom10">
+                <div class="col col-33 last-entry-details">{{userHistoryObject.height}}</div>
+                <div class="col col-33 last-entry-details">{{userHistoryObject.weight}}</div>
+                <div class="col col-33 last-entry-details">{{userHistoryObject.where}}</div>
+            </div>
+            <div class="row red-background ">
+                <div class="col col-33 last-entry-details">{{userHistoryObject.gender}}</div>
+                <div class="col col-33 last-entry-details">{{userHistoryObject.nationality}}</div>
+                <div class="col col-33 last-entry-details">{{userHistoryObject.job}}</div>
+            </div>
+            <div class="row red-background ">
+                <div class="col last-entry-details">{{userHistoryObject.comment}}</div>
+            </div>
+        </div>
+        <div class=" margin10">
+            <div class="row ">
+                <div  class="col last-entry-details   delete-background button"> <i class="icon ion-ios-close"></i>  Remove
+                </div> <div class="col  last-entry-details blue-background  button "> <i class="icon ion-share"></i>  Share
+                </div>
+            </div>
+        </div>
+<!--
+        
+        
+        <div class="list card">
+
+            <div class="item">
+                
+                <h2>What happened on the {{userHistoryObject.date | datefilter }}</h2>
+                <p>You ranked :   <i data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 0}" ></i>
+                <i  data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 1, 'ion-ios-star-outline': userHistoryObject.ranking < 2}"></i>
+                <i  data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 2, 'ion-ios-star-outline': userHistoryObject.ranking <3}"></i>
+                <i  data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 3, 'ion-ios-star-outline': userHistoryObject.ranking <4}" ></i>
+                <i  data-ng-class="{'ion-ios-star': userHistoryObject.ranking > 4, 'ion-ios-star-outline': userHistoryObject.ranking <5}" ></i></p>
+            </div>
+
+            <div class="item item-body">
+                <img class="full-image" src="delorean.jpg">
+                <p>
+                   You dated a {{userHistoryObject.height}} and  {{userHistoryObject.weight}}  {{userHistoryObject.gender}} from  {{userHistoryObject.nationality}} working as a  {{userHistoryObject.job}}.<br>
+                    It took place in a {{userHistoryObject.where}}.<br><br>
+                    Your comment from this experience :<br> ' {{userHistoryObject.comment}} '.
+                   
+                </p>
+                
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+              
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share it
+                </a>
+            </div>
+
+        </div>
+-->
+
+
+        <!--
+        <div class="row">
+            <div class="col  details-history">{{userHistoryObject.date | datefilter }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col  details-history gender"><i class="fa fa-venus-mars"></i>  {{userHistoryObject.gender }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col details-history">      <i class="fa fa-globe"></i> {{userHistoryObject.nationality}}</div>
+        </div>
+        <div class="row">
+            <div class="col details-history"><i class="icon ion-briefcase"></i> {{userHistoryObject.job}}</div>
+        </div>
+        <div class="row">
+            <div class="col  details-history"> <i class="fa fa-star-half-o"></i></div>
+        </div>
+        <div class="row">
+            <div class="col details-history"> <i class="fa fa-map-marker"></i> {{userHistoryObject.where}}</div>
+        </div>
+        <div class="row">
+            <div class="col details-history">  <i class="fa fa-stethoscope"></i> {{userHistoryObject.weight}}</div>
+        </div>
+        <div class="row">
+            <div class="col details-history"> <i class="fa fa-stethoscope"></i>  {{userHistoryObject.height}}</div>
+        </div>
+        <div class="row">
+            <div class="col details-history"><i class="icon ion-edit"></i> {{userHistoryObject.comment}}</div>
+        </div>
+-->
+    </ion-content>
+</ion-view>

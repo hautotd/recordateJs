@@ -1,0 +1,22 @@
+<ion-view view-title="Select friend">
+     <ion-content>
+    <ul class="list">
+        <li   data-ng-repeat="friend in friendsList" class="item item-checkbox friends-list">
+            <label class="checkbox">
+                <input data-ng-model="friend.selected" data-ng-true-value="true"  data-ng-false-value="false"  type="checkbox">
+            </label>
+            {{friend.name}}
+        </li>
+    </ul>
+<!--
+    <button data-ng-click="sendNotificationAndUpdateHistory()" class="button button-block button-positive">
+                Send ! 
+            </button>
+-->
+    </ion-content>
+    <ion-footer-bar  data-ng-click="sendNotificationAndUpdateHistory()"   style="background-color: #FFDE39;
+color: #07496A;">
+        <div class="title">SEND
+        </div>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,43 @@
+<ion-modal-view>
+<!--
+    <ion-header-bar>
+        <h1 class="title">Login</h1>
+        
+    </ion-header-bar>
+-->
+    <ion-content class="login-background">
+       
+        <form ng-submit="doLogin()">
+            <div style="margin: 20px;" class="list">
+                 <div style="text-align: center;margin-top: 9%;
+margin-bottom: 50px;">
+                    <img src="img/RD-logo-white.png">
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loginData.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="loginData.password">
+                </label>
+
+                <label style="background-color: transparent;" class="item">
+                    <button style="color:white" class="button button-full  button-clear button-positive" type="submit">Login</button>
+
+                </label> 
+              
+             
+
+                <label data-ng-show="showErrorLogin">{{errorLoginMessage}}</label>
+            </div>
+        </form>
+           <button style="color:white" class="button button-full  button-clear button-positive" data-ng-click="subscribe()">
+                    Subscribe
+                </button>
+          <label style="background-color: transparent;" class="item">
+<!--                    <button style="color:white" class="button button-full  button-clear button-positive" data-ng-click="facebookLogin()">Facebook</button>-->
+
+                </label>
+    </ion-content>
+</ion-modal-view>

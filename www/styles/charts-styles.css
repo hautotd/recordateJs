@@ -1,0 +1,109 @@
+.red-background {
+    background-color: #F1736A;
+}
+.delete-background{
+     background-color: #DB4439; 
+}
+.gray-background {
+    background-color: #616161;
+}
+.blue-background {
+    background-color: #02A3B0;
+}
+.orange-background {
+    background-color: #EDA94E;
+}.facebook-background {
+    background-color: #3a5795;
+}.twitter-background {
+    background-color: #323332;
+}
+.marginbottom10 {
+    margin-bottom: 10px;
+}
+.margin10 {
+    margin: 10px;
+}
+.section-title-colored {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    border-bottom: #FFFFFF solid 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+.section-title {
+    text-align: center;
+    color: #B63232;
+    margin-bottom: 10px;
+    border-bottom: #B63232 solid 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.last-entry-details,
+.last-entry-details h2 {
+    text-align: center;
+    color: #FFFFFF;
+}
+.last-entry-details.action-button {
+    text-align: center;
+    color: #FFFFFF;
+    height: 50px;
+    line-height: 39px;
+}
+.last-entry-details.delete-background.button.activated{
+    background-color: #802720;
+}.last-entry-details.blue-background.button.activated{
+   background-color: #01585F;
+}
+.section-last-entry,
+.section-last-entry h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+.history-list {
+    padding: 0;
+    margin-bottom: 5px;
+}
+.history-list-elem {
+    padding: 0;
+    margin-bottom: 20px;
+    border-bottom: #EDA94E solid 1px;
+    /* background-color: #07496C; */
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(7, 73, 106);
+    margin-top: 6px;
+}
+.history-list-elem:active {
+    background-color: #DCE0E2;
+}
+.history-list-elem .center {
+    /*    color: white;*/
+    font-size: 20px;
+}
+.history-list-elem .center a,
+.history-list-elem .center h2,
+.history-list-elem .center p {
+    border-right-color: #02A3B0;
+    border-left-color: #02A3B0;
+    border-bottom-color: #07496C;
+    border-top-color: #07496C;
+    /*    background-color: #02A3B0;*/
+    border: none;
+}
+.history-list-elem .left i {
+    /*    border: none;*/
+    /*    color: white;*/
+    font-size: 30px;
+    padding-left: 7px;
+}
+.history-list-elem .right i {
+    font-size: 30px;
+    /* top: 50%; */
+    /*line-height: 2;*/
+    /*    color:#EDA94E*/
+}

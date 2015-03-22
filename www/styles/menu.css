@@ -1,0 +1,45 @@
+.rd-menu {
+/*    background-color: #3f3f3f;*/
+        background-color: #07496A;
+    /*    background-color: #73A6BD;*/
+    color: white;
+}
+.rd-menu .item-complex .item-content,
+.item-radio .item-content a {
+    /*    background-color: #73A6BD;*/
+    /*    background-color: #07496A;*/
+    background-color: #086593;
+    color: white;
+    font-size: 40px;
+    /*    font-weight: bold;*/
+    text-align: center;
+    padding-right: 16px;
+}
+.rd-menu .degrade1 a.item-content{
+    /*    background-color: #73A6BD;*/
+    /*    background-color: #07496A;*/
+    background-color:#086593;
+}
+.rd-menu .degrade2 a.item-content{
+    /*    background-color: #73A6BD;*/
+    /*    background-color: #07496A;*/
+    background-color: #0A7CB5;
+}
+.rd-menu .degrade3 a.item-content{
+    /*    background-color: #73A6BD;*/
+    /*    background-color: #07496A;*/
+    background-color:  #1398DA ;
+}
+.rd-menu .degrade4 a.item-content{
+    /*    background-color: #73A6BD;*/
+    /*    background-color: #07496A;*/
+    background-color:#16ADF9;
+}
+
+
+.rd-menu,
+.rd-menu h1 {
+    /*    background-color: #73A6BD;*/
+    background-color: #07496A;
+    color: white;
+}

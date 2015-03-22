@@ -1,0 +1,25 @@
+<ion-view view-title="{{navTitle}}">
+    <ion-content class="history-background">
+        <ion-refresher pulling-icon="ion-load-a" refreshing-icon="ion-load-a" pulling-text="Refreshing history ..." on-refresh="doRefresh()">
+        </ion-refresher>
+
+            <span data-ng-show="!historyList.length">It seems you never met someone!</span>
+
+
+        <div data-ng-click="goToDetail(historyItem)" data-ng-repeat="historyItem in historyList | orderBy:'-date'">
+
+
+            <a class="item item-icon-left item-icon-right history-select" href="#">
+                <i class="icon ion-ios-pricetag-outline"></i>
+                <h2>{{historyItem.date | datefilter}} </h2>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 0}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 1, 'ion-ios-star-outline': historyItem.ranking < 2}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 2, 'ion-ios-star-outline': historyItem.ranking <3}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 3, 'ion-ios-star-outline': historyItem.ranking <4}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 4, 'ion-ios-star-outline': historyItem.ranking <5}"></i>
+                <p>{{historyItem.comment}}</p>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

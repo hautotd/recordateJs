@@ -1,0 +1,76 @@
+<ion-view view-title="Settings">
+    <ion-content data-ng-init="showInfos = false; showChPass = false">
+        <div class="row">
+            <div class="col setting-elem" data-ng-class="{'no-border': showInfos===true}" data-ng-click="showInfos = !showInfos">
+                <div><i class="icon ion-ios-person-outline"></i> 
+                </div>
+                <div class="label-txt">My infos</div>
+            </div>
+            <div class="col setting-elem" ng-click="logOff()">
+                <div><i class="icon ion-ios-close-outline"></i> 
+                </div>
+                <div class="label-txt">Log out</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="list" data-ng-if="showInfos" style="color: #025D8B;">
+                    <div class="item item-thumbnail-left  item-icon-right"  >
+                        <img src="{{imSrc}}">
+                         <h2>{{userInfos.name}}</h2>
+                        <p>24 yo</p>
+                        <i data-ng-click="takePic()" class="icon ion-camera"></i>
+                    </div>
+                     
+                    <a class="item item-icon-left"  >
+                        <i class="icon ion-email"></i>
+                        {{userInfos.email}}
+                    </a>
+                    <a class="item item-icon-left"  >
+                        <i class="icon ion-ios-people"></i>
+                        Only {{userInfos.friends.length}} !
+                    </a>
+                    <a class="item item-icon-left"  >
+                        <i class="icon ion-ios-pie"></i>
+                        Only {{userInfos.history.length}} dates !
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div data-ng-click="showChPass = !showChPass" class="col setting-elem" data-ng-class="{'no-border': showChPass===true}">
+                ?
+                <div class="label-txt">Forgot password</div>
+            </div>
+            <div class="col setting-elem">
+                <div><i class="icon  ion-ios-unlocked-outline"></i> 
+                </div>
+
+                <div class="label-txt">Change password</div>
+            </div>
+
+
+        </div>
+        <div class="list" data-ng-if="showChPass" style="color: #025D8B;">
+            <label class="item item-input">
+                <span class="input-label" style="color: #025D8B;">Current password</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label" style="color: #025D8B;">New password</span>
+                <input type="password">
+            </label>
+            <label class="item item-input">
+                <span class="input-label" style="color: #025D8B;">Confirm password</span>
+                <input type="password">
+            </label>
+            <button style="color:white; margin:0" class="button button-full blue-background">
+                Update
+            </button>
+        </div>
+
+    </ion-content>
+
+</ion-view>

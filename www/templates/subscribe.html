@@ -1,0 +1,30 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Subscribe</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeSubscribe()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doSubscribe()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="subscriptionData.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="subscriptionData.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="subscriptionData.password">
+                </label>
+                
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Subscribe</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

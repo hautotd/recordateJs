@@ -1,0 +1,49 @@
+<ion-view view-title="Dates list">
+    <ion-content class="">
+        <ion-refresher pulling-icon="ion-load-a" refreshing-icon="ion-load-a" on-refresh="doRefresh()">
+        </ion-refresher>
+        <span data-ng-show="!historyList.length">It seems you never met someone!</span>
+
+        <div class="list">
+
+    <a data-ng-repeat="historyItem in historyList | orderBy:'-date'" class="item item-avatar" data-ng-click="goToDetail(historyItem)" >
+      <img data-ng-if="historyItem.profilePic" src="{{historyItem.profilePic}}"> 
+      <h2><span data-ng-show="!historyItem.ranking">No ranking</span>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 0}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 1, 'ion-ios-star-outline': historyItem.ranking < 2}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 2, 'ion-ios-star-outline': historyItem.ranking <3}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 3, 'ion-ios-star-outline': historyItem.ranking <4}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 4, 'ion-ios-star-outline': historyItem.ranking <5}"></i>
+              </h2>
+      <p>{{historyItem.comment}}</p>
+    </a>
+
+</div>
+        
+        
+        
+<!--
+        <div data-ng-click="goToDetail(historyItem)" data-ng-repeat="historyItem in historyList | orderBy:'-date'" class="row history-list-elem">
+            <div class="col col-10 left">
+                <i   class="icon ion-ios-play-outline"></i>
+                <img src="{{historyItem.profilePic}}">
+            </div>
+            <div class="col col-80 center">
+                  <span>{{historyItem.date | simpleDatefilter}} : </span>
+                <span data-ng-show="!historyItem.ranking">No ranking</span>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 0}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 1, 'ion-ios-star-outline': historyItem.ranking < 2}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 2, 'ion-ios-star-outline': historyItem.ranking <3}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 3, 'ion-ios-star-outline': historyItem.ranking <4}"></i>
+                <i data-ng-class="{'ion-ios-star': historyItem.ranking > 4, 'ion-ios-star-outline': historyItem.ranking <5}"></i>
+              
+            </div>
+            <div class="col col-10 right">
+                <i  class="icon ion-ios-arrow-right"></i>
+            </div>
+ 
+        </div>
+-->
+
+    </ion-content>
+</ion-view>
